@@ -87,5 +87,25 @@ public void addStudent(Scanner scanner) {
         }
     }
 
+        // Function to update student details
+    public void updateStudent(Scanner scanner) {
+        System.out.print("Enter PRN to update: ");
+        String prn = scanner.nextLine();
+        for (Student student : students) {
+            if (student.getPrn().equals(prn)) {
+                System.out.print("Enter new Name: ");
+                student.setName(scanner.nextLine());
+                System.out.print("Enter new DOB: ");
+                student.setDob(scanner.nextLine());
+                System.out.print("Enter new Marks: ");
+                student.setMarks(scanner.nextDouble());
+                scanner.nextLine();  // Consume newline
+                System.out.println("Student details updated.");
+                return;
+            }
+        }
+        System.out.println("Student not found.");
+    }
+
 
 }
