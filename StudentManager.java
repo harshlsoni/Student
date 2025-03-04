@@ -49,4 +49,32 @@ public void addStudent(Scanner scanner) {
         System.out.println("Student not found.");
     }
 
+    // Function to search student by Name
+    public void searchByName(Scanner scanner) {
+        System.out.print("Enter Name to search: ");
+        String name = scanner.nextLine();
+        for (Student student : students) {
+            if (student.getName().equalsIgnoreCase(name)) {
+                System.out.println("Student Found: " + student);
+                return;
+            }
+        }
+        System.out.println("Student not found.");
+    }
+
+    // Function to search student by Name
+    public void searchByName(Scanner scanner) {
+        System.out.print("Enter Name to search: ");
+        String name = scanner.nextLine();
+        for (Student student : students) {
+            if (student.getName().equalsIgnoreCase(name)) {
+                System.out.println("Student Found: " + student);
+                return;
+            }
+        }
+        System.out.println("Student not found.");
+    }
+
+
+
 }
