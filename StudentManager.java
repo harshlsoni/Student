@@ -36,4 +36,17 @@ public void addStudent(Scanner scanner) {
     }
 
 
+    // Function to search student by PRN
+    public void searchByPRN(Scanner scanner) {
+        System.out.print("Enter PRN to search: ");
+        String prn = scanner.nextLine();
+        for (Student student : students) {
+            if (student.getPrn().equals(prn)) {
+                System.out.println("Student Found: " + student);
+                return;
+            }
+        }
+        System.out.println("Student not found.");
+    }
+
 }
