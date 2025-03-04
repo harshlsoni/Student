@@ -75,6 +75,17 @@ public void addStudent(Scanner scanner) {
         System.out.println("Student not found.");
     }
 
+    // Function to search student by Position
+    public void searchByPosition(Scanner scanner) {
+        System.out.print("Enter position (index) to search: ");
+        int index = scanner.nextInt();
+        scanner.nextLine();  // Consume newline
+        if (index >= 0 && index < students.size()) {
+            System.out.println("Student Found: " + students.get(index));
+        } else {
+            System.out.println("Invalid position.");
+        }
+    }
 
 
 }
