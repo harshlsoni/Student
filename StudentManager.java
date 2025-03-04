@@ -107,5 +107,21 @@ public void addStudent(Scanner scanner) {
         System.out.println("Student not found.");
     }
 
+    // Function to delete a student by PRN
+    public void deleteStudent(Scanner scanner) {
+        System.out.print("Enter PRN to delete: ");
+        String prn = scanner.nextLine();
+        Iterator<Student> iterator = students.iterator();
+        while (iterator.hasNext()) {
+            if (iterator.next().getPrn().equals(prn)) {
+                iterator.remove();
+                System.out.println("Student deleted successfully.");
+                return;
+            }
+        }
+        System.out.println("Student not found.");
+    }
+}
+
 
 }
